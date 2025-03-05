@@ -17,10 +17,10 @@ body, html {
 
 /* Estilo para el recuadro de la cuenta regresiva (en forma de corazón) */
 #countdown {
+    position: relative;
     width: 200px;
     height: 200px;
     background-color: red;
-    clip-path: polygon(50% 0%, 0% 35%, 0% 100%, 50% 85%, 100% 100%, 100% 35%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +28,28 @@ body, html {
     font-size: 24px;
     font-weight: bold;
     border-radius: 10px;
+    transform: rotate(-45deg);
+    margin: 20px auto;
+}
+
+#countdown::before,
+#countdown::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+#countdown::before {
+    top: -100px;
+    left: 0;
+}
+
+#countdown::after {
+    top: 0;
+    left: 100px;
 }
 
 /* Estilo del input */
