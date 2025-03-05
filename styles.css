@@ -19,9 +19,21 @@ body {
     max-width: 600px;
 }
 
+/* Estilo para el recuadro de la cuenta regresiva */
 #countdown {
-    font-size: 2rem;
-    color: #FF6347;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    clip-path: polygon(50% 0%, 0% 35%, 0% 100%, 50% 85%, 100% 100%, 100% 35%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
 }
 
 .message-section {
