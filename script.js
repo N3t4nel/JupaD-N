@@ -15,21 +15,26 @@ setInterval(function() {
     }
 }, 1000);
 
-// Mensajes románticos al azar
+// Lista de nombres válidos
+const validNames = ["Deby", "Lydia", "Debora"];
+
+// Mensajes románticos con tono argentino
 const messages = [
-    "Eres mi todo, y pronto seremos uno.",
-    "Cada día me enamoro más de ti.",
-    "El mejor día de mi vida será a tu lado.",
-    "Pronto, ¡seremos esposos! ❤️",
-    "Cada momento contigo es un regalo del cielo."
+    "Te quiero tanto, y cada día me siento más afortunado de tenerte a mi lado.",
+    "Faltan pocos días para que nuestro amor se haga eterno. ¡Te amo con todo mi corazón!",
+    "Cada vez que miro a los ojos, veo mi futuro. Y mi futuro es contigo. ❤️",
+    "No puedo esperar a que llegue ese día, el mejor de todos, el día en que seremos uno solo.",
+    "Mi amor, cada día que pasa, mi cariño por vos crece aún más. ¡Te amo más de lo que imaginas!"
 ];
 
 function showRandomMessage() {
     const name = document.getElementById("name").value;
-    if (name) {
+
+    if (validNames.includes(name)) {
         const randomMessage = messages[Math.floor(Math.random() * messages.length)];
         document.getElementById("message").innerText = `${randomMessage} - De tu amor, ${name}`;
     } else {
-        document.getElementById("message").innerText = "Por favor, ingresa tu nombre.";
+        document.getElementById("message").innerText = "¡Ups! El nombre que ingresaste no es válido. Solo aceptamos: Juan, Ana o Pedro.";
     }
 }
+
