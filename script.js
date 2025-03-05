@@ -1,5 +1,5 @@
-// Cuenta regresiva hasta el 1 de abril de 2025
-const countdownDate = new Date("April 1, 2025 00:00:00").getTime();
+// Cuenta regresiva hasta el 1 de abril de 2025 a las 19:30hs en Argentina (GMT-3)
+const countdownDate = new Date("April 1, 2025 19:30:00 GMT-0300").getTime();
 
 // Actualiza el contador cada segundo
 setInterval(function() {
@@ -7,8 +7,10 @@ setInterval(function() {
     const distance = countdownDate - now;
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
-    document.getElementById("countdown").innerHTML = `${days} días`;
+    document.getElementById("countdown").innerHTML = `${days} días, ${hours} horas, ${minutes} minutos`;
 
     if (distance < 0) {
         document.getElementById("countdown").innerHTML = "¡El gran día ha llegado!";
@@ -16,7 +18,7 @@ setInterval(function() {
 }, 1000);
 
 // Lista de nombres válidos
-const validNames = ["Deby", "Lydia", "Debora"];
+const validNames = ["deby", "lydia", "debora"]; // Nombres en minúsculas para facilitar la comparación
 
 // Mensajes románticos con tono argentino
 const messages = [
@@ -28,13 +30,12 @@ const messages = [
 ];
 
 function showRandomMessage() {
-    const name = document.getElementById("name").value;
+    const name = document.getElementById("name").value.trim().toLowerCase(); // Convierte a minúsculas y elimina espacios
 
     if (validNames.includes(name)) {
         const randomMessage = messages[Math.floor(Math.random() * messages.length)];
         document.getElementById("message").innerText = `${randomMessage} - De tu amor, ${name}`;
     } else {
-        document.getElementById("message").innerText = "¡Ups! El nombre que ingresaste no es válido. Solo aceptamos: Juan, Ana o Pedro.";
+        document.getElementById("message").innerText = "¡Ups! El nombre que ingresaste no es válido. Solo aceptamos: Deby, Lydia o Debora.";
     }
 }
-
