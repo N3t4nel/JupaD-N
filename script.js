@@ -36,6 +36,6 @@ function showRandomMessage() {
         const randomMessage = messages[Math.floor(Math.random() * messages.length)];
         document.getElementById("message").innerText = `${randomMessage} - De tu amor, ${name}`;
     } else {
-        document.getElementById("message").innerText = "¡Ups! El nombre que ingresaste no es válido. Solo aceptamos: Deby, Lydia o Debora.";
+        document.getElementById("message").innerText = "¡Ups! El nombre que ingresaste no es válido.";
     }
 }
