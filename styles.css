@@ -13,11 +13,11 @@ body, html {
 /* Contenedor principal */
 .container {
     text-align: center;
-    padding: 40px;
+    padding: 20px;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
+    max-width: 400px;
     width: 100%;
 }
 
@@ -45,7 +45,7 @@ body, html {
 input[type="text"] {
     padding: 12px 20px;
     font-size: 16px;
-    width: 250px;
+    width: 90%; /* Adaptado para ocupar el 90% del ancho en móvil */
     margin-bottom: 15px;
     border-radius: 5px;
     border: 2px solid #ff5c5c;
@@ -67,6 +67,7 @@ button {
     color: white;
     border-radius: 5px;
     transition: 0.3s ease;
+    width: 100%; /* El botón ocupa todo el ancho en dispositivos pequeños */
 }
 
 button:hover {
@@ -82,3 +83,24 @@ button:hover {
     max-width: 400px;
     margin: 0 auto;
 }
+
+/* Consulta de medios para dispositivos pequeños */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    #countdown {
+        font-size: 36px; /* Ajustamos el tamaño de la cuenta regresiva */
+    }
+
+    input[type="text"] {
+        font-size: 14px; /* Reducimos el tamaño de la fuente para el móvil */
+    }
+
+    button {
+        font-size: 16px; /* Ajustamos el tamaño del botón */
+    }
+}
+
