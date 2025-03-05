@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuenta Regresiva</title>
+    <title>Cuenta Regresiva para la Boda</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div id="countdown" class="heart"></div>
+        <!-- Recuadro en forma de corazón para la cuenta regresiva -->
+        <div id="countdown"></div>
+
+        <!-- Campo para ingresar el nombre -->
         <input type="text" id="name" placeholder="Ingresa tu nombre" />
+        
+        <!-- Botón para mostrar el mensaje romántico -->
         <button onclick="showRandomMessage()">Ver mensaje romántico</button>
+
+        <!-- Sección donde se muestra el mensaje romántico -->
         <div id="message"></div>
     </div>
+    
+    <!-- Conectar el archivo JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
