@@ -8,20 +8,17 @@
 </head>
 <body>
     <div class="container">
-        <!-- Recuadro en forma de corazón para la cuenta regresiva -->
-        <div id="countdown"></div>
-
-        <!-- Campo para ingresar el nombre -->
-        <input type="text" id="name" placeholder="Ingresa tu nombre" />
-        
-        <!-- Botón para mostrar el mensaje romántico -->
-        <button onclick="showRandomMessage()">Ver mensaje romántico</button>
+        <!-- Corazón en 3D que contiene la cuenta regresiva y los campos -->
+        <div id="heart">
+            <div id="countdown">00:00:00</div>
+            <input type="text" id="name" placeholder="Ingresa tu nombre" />
+            <button onclick="showRandomMessage()">Ver mensaje romántico</button>
+        </div>
 
         <!-- Sección donde se muestra el mensaje romántico -->
         <div id="message"></div>
     </div>
-    
-    <!-- Conectar el archivo JavaScript -->
+
     <script src="script.js"></script>
 </body>
 </html>
